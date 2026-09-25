@@ -369,7 +369,7 @@ function drawSide(){
       <dt>Baths</dt><dd>${show(r.baths)}</dd>
       <dt>LOT</dt><dd>${show(r.lotsize, v => isNum(v) ? v + ' acres' : v)}</dd>
     </dl>
-    ${r.link ? `<a class="btn" href="${esc(r.link)}" target="_top">View Homesite<span class="arrow"></span></a>` : ''}`;
+    ${r.link ? `<a class="btn" href="${esc(r.link)}" target="_top">Explore This Home<span class="arrow"></span></a>` : ''}`;
   side.querySelector('.close').onclick = () => { selected = null; render(); };
   if (matchMedia('(max-width:760px)').matches) side.scrollIntoView({block:'nearest', behavior:'smooth'});
 }
