@@ -363,7 +363,7 @@ function drawSide(){
     <h2>Lot ${esc(r.lot)}</h2>
     <p class="price">${r.price ? esc(money(r.price)) : 'Contact us for pricing'}</p>
     <dl>
-      <dt>Plan</dt><dd>${esc(planLabel(r))}</dd>
+      <dt>Plan</dt><dd>${esc(planLabel(r))}${(r.design || '').trim() ? ' - ' + esc(r.design.trim()) : ''}</dd>
       <dt>SQFT</dt><dd>${show(r.sqft, v => withCommas(v))}</dd>
       <dt>Beds</dt><dd>${show(r.beds)}</dd>
       <dt>Baths</dt><dd>${show(r.baths)}</dd>
